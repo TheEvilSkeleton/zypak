@@ -15,7 +15,7 @@ void SandboxPath::set_sandbox_path(std::string_view path) { sandbox_path_ = path
 
 bool SandboxPath::LooksLikeSandboxPath(std::string_view path) {
   if (sandbox_path_.empty()) {
-    return EndsWith(path, "/chrome-sandbox");
+    return EndsWith(path, "/msedge-sandbox");
   }
 
   return sandbox_path_ == path;
