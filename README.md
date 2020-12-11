@@ -1,6 +1,6 @@
-# zypak
+# zypak-edge
 
-Allows you to run Chromium based applications that require a sandbox in a Flatpak environment,
+Allows you to run [Microsoft Edge](https://github.com/TheEvilSkeleton/com.microsoft.Edge) in a sandboxed environment
 by using LD_PRELOAD magic and a redirection system that redirects Chromium's sandbox to use
 the Flatpak sandbox.
 
@@ -14,40 +14,6 @@ This requires your Flatpak to be using:
 
 Now, instead of running your Electron binary directly, call it via
 `zypak-wrapper PATH/TO/MY/ELECTRON/BINARY`.
-
-## Usage with a wrapper script
-
-If this is wrapping an application that requries some sort of wrapper script,
-make sure you set `CHROME_WRAPPER=` to the path of said script. Otherwise, if the
-application attempts to re-exec itself (i.e. `chrome://restart`), it won't be using
-the wrapper on re-exec, leading to potentially unexpected behavior.
-
-## Using a different version
-
-If you want to try a different Zypak version for testing, or without using the
-Electron baseapp, then find the release tag you want to use and add one of these
-modules somewhere in your Flatpak manifest:
-
-```json
-{
-  "name": "zypak",
-  "sources": [
-    {
-      "type": "git",
-      "url": "https://github.com/refi64/zypak",
-      "tag": "THE_RELEASE_TAG"
-    }
-  ]
-}
-```
-
-```yaml
-- name: zypak
-  sources:
-    - type: git
-      url: https://github.com/refi64/zypak
-      tag: THE_RELEASE_TAG
-```
 
 ## Experimental functionality
 
