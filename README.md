@@ -1,5 +1,7 @@
 # zypak-edge
 
+## [**I'm so stupid**](https://github.com/TheEvilSkeleton/flathub/commit/e8c77c38dfcbc76f65cbabb7a6f58d1bc85501e1)
+
 Allows you to run [Microsoft Edge](https://github.com/TheEvilSkeleton/flathub/tree/com.microsoft.Edge) in a sandboxed environment
 by using LD_PRELOAD magic and a redirection system that redirects Chromium's sandbox to use
 the Flatpak sandbox.
